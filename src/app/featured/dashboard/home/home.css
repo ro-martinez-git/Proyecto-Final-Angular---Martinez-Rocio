@@ -1,0 +1,46 @@
+.home-main {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-card {
+    max-width: 800px;
+    width: 100%;
+    color: white;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 30px;
+    align-items: center;
+}
+
+mat-card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+mat-card-content p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+mat-card-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+mat-card-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+mat-card-content li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+}
+

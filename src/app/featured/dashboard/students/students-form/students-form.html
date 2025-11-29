@@ -1,0 +1,56 @@
+<form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+  @if (isEditing) {
+    <mat-form-field appearance="fill">
+      <mat-label>ID</mat-label>
+      <input matInput disabled value="{{ studentId }}" />
+    </mat-form-field>
+  }
+
+  <mat-form-field class="w-full">
+    <mat-label>Nombre</mat-label>
+    <input
+      [ngClass]="{
+        'is-invalid': inputInvalid('name'),
+        'is-valid': inputValid('name') && createForm.get('name')?.dirty
+      }"
+      matInput
+      name="name"
+      formControlName="name"
+    />
+    <mat-error>{{ getError('name') }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="w-full">
+    <mat-label>Email</mat-label>
+    <input
+      [ngClass]="{
+        'is-invalid': inputInvalid('email'),
+        'is-valid': inputValid('email') && createForm.get('email')?.dirty
+      }"
+      matInput
+      name="email"
+      formControlName="email"
+    />
+    <mat-error>{{ getError('email') }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="w-full">
+    <mat-label>Fecha de nacimiento</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="birthDate" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <mat-error>{{ getError('birthDate') }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="w-full">
+    <mat-label>Estado</mat-label>
+    <mat-select name="status" formControlName="status">
+      <mat-option value="ACTIVE">Activo</mat-option>
+      <mat-option value="SUSPENDED">Suspendido</mat-option>
+      <mat-option value="GRADUATED">Graduado</mat-option>
+    </mat-select>
+    <mat-error>{{ getError('status') }}</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary">Guardar</button>
+</form>

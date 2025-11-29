@@ -1,0 +1,23 @@
+<main class="home-main">
+  <mat-card class="home-card">
+    <mat-card-header>
+      <mat-card-title>Bienvenido/a {{(user$ |async)?.username}}</mat-card-title>
+      <mat-card-title>Plataforma de Gestión Académica</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p>
+        Esta plataforma fue pensada para ayudarte a organizar cursos y alumnos de forma simple y visual. Acá podés crear, editar y eliminar registros, explorar estados académicos y probar cómo se comporta una app educativa con estructura CRUD.
+      </p>
+
+      <h2>Opciones disponibles: </h2>
+      <ul>
+        <li>📚 Cursos con descripción, fechas y estado (Programado, Iniciado, Finalizado)</li>
+        <li>👩‍🎓 Alumnos registrados con sus datos básicos</li>
+        <li>🛠 Funcionalidad CRUD para pruebas y desarrollo</li>
+        <li>🎯 Interfaz visual con Angular Material</li>
+      </ul>
+    </mat-card-content>
+
+  </mat-card>
+</main>

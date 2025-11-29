@@ -1,0 +1,75 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "1234",
+      "role": "ADMIN"
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "email": "user@gmail.com",
+      "password": "1234",
+      "role": "USER"
+    },
+    {
+      "id": "3",
+      "username": "Rocío",
+      "email": "romar@gmail.com",
+      "password": "1234",
+      "role": "USER"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Diseño UI con Figma",
+      "description": "Este curso te introduce al diseño de interfaces modernas utilizando Figma. Aprenderás a crear layouts responsivos, manejar componentes reutilizables y aplicar principios de diseño visual para mejorar la experiencia del usuario.",
+      "beginDate": "2023-03-01",
+      "endDate": "2023-06-30",
+      "status": "CANCELLED"
+    },
+    {
+      "id": 2,
+      "title": "Introducción a UX Research",
+      "description": "Explorá las técnicas fundamentales de investigación de usuarios: entrevistas, encuestas, pruebas de usabilidad y análisis de comportamiento. Este curso te ayudará a tomar decisiones basadas en evidencia real.",
+      "beginDate": "2023-04-15",
+      "endDate": "2023-08-15",
+      "status": "STARTED"
+    },
+    {
+      "id": 3,
+      "title": "Testing Automatizado con Cypress",
+      "description": "Aprendé a escribir pruebas automatizadas para aplicaciones web usando Cypress. Desde pruebas de integración hasta validaciones visuales, este curso te prepara para mejorar la calidad de tus desarrollos.",
+      "beginDate": "2022-09-01",
+      "endDate": "2022-12-01",
+      "status": "FINISHED"
+    },
+    {
+      "id": 4,
+      "title": "Análisis de Datos con Python",
+      "description": "Descubrí cómo procesar, visualizar y analizar datos con Python. Usarás librerías como Pandas, Matplotlib y Seaborn para extraer insights y construir reportes interactivos.",
+      "beginDate": "2023-05-01",
+      "endDate": "2023-11-30",
+      "status": "SCHEDULED"
+    }
+  ],
+  "students": [
+    {
+      "id": 501,
+      "name": "Juan Pérez",
+      "email": "juanperez@gmail.com"
+    }
+  ],
+  "inscripciones": [
+    {
+      "id": 1,
+      "courseId": 2,
+      "studentId": 501,
+      "fecha": "2025-11-28T19:45:00",
+      "usuarioId": 3
+    }
+  ]
+}
