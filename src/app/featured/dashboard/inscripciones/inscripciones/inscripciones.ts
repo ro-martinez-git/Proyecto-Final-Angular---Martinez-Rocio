@@ -28,12 +28,10 @@ export class InscripcionesComponent implements OnInit {
   }
 
   crearInscripcion() {
-    // acá podrías abrir un dialog con Angular Material para ingresar datos
     console.log('Crear inscripción');
   }
 
   editarInscripcion(inscripcion: any) {
-    // abrir dialog con datos de la inscripción
     console.log('Editar inscripción', inscripcion);
   }
 
