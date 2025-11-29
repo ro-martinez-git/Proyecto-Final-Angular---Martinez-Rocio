@@ -21,7 +21,7 @@ export class InscripcionesService {
     this.getInscripciones();
   }
 
-  // Obtener todas las inscripciones y actualizar el estado
+
   getInscripciones(): void {
     this.http.get<Inscripcion[]>(this.url).subscribe((data) => {
       this.inscripciones = data;
@@ -29,12 +29,12 @@ export class InscripcionesService {
     });
   }
 
-  // Obtener una inscripción por ID
+
   getInscripcionById(id: number | string): Observable<Inscripcion> {
     return this.http.get<Inscripcion>(`${this.url}/${id}`);
   }
 
-  // Crear una nueva inscripción
+
   addInscripcion(inscripcion: Inscripcion): void {
     const newId = String(Number(this.inscripciones[this.inscripciones.length - 1]?.id || 0) + 1);
     inscripcion.id = newId;
@@ -44,7 +44,6 @@ export class InscripcionesService {
     });
   }
 
-  // Actualizar una inscripción existente
   updateInscripcion(inscripcion: Inscripcion): void {
     const updatedInscripciones = this.inscripciones.map((i) => (i.id === inscripcion.id ? inscripcion : i));
     this.http.put<Inscripcion>(`${this.url}/${inscripcion.id}`, inscripcion).subscribe(() => {
@@ -53,7 +52,7 @@ export class InscripcionesService {
     });
   }
 
-  // Eliminar una inscripción
+
   deleteInscripcion(id: number | string): void {
     const updatedInscripciones = this.inscripciones.filter((i) => i.id !== id);
     this.http.delete<void>(`${this.url}/${id}`).subscribe(() => {
